@@ -1,0 +1,63 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#a)">
+    <path d="M26.501 35.499c-4.623-6.5 3.573-14.722 10.09-10.123 145.356 102.583 213.971 124.236 400.1 11.497 7.22-4.373 15.591 5.795 9.622 11.763L48.97 445.98c-5.96 5.96-16.055-2.355-11.69-9.566 113.877-188.14 92.916-255.117-10.78-400.915" fill="#000"/>
+    <mask id="b" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="64" y="63" width="424" height="425">
+      <path d="M485.962 476.03c4.623 6.5-3.573 14.722-10.09 10.123-145.356-102.583-213.971-124.236-400.1-11.497-7.22 4.373-15.59-5.795-9.622-11.763L463.493 65.549c5.96-5.96 16.055 2.355 11.69 9.566-113.877 188.14-92.916 255.117 10.779 400.915" fill="#0004ff"/>
+    </mask>
+    <g mask="url(#b)">
+      <g filter="url(#c)">
+        <ellipse cx="292.829" cy="244.09" rx="468.291" ry="41.976" transform="rotate(-45 292.829 244.09)" fill="#7a00ff"/>
+      </g>
+      <g filter="url(#d)">
+        <ellipse cx="331.775" cy="308.775" rx="212.524" ry="48.788" transform="rotate(-45 331.775 308.775)" fill="#0bf"/>
+      </g>
+      <g filter="url(#e)">
+        <ellipse cx="365.897" cy="351.898" rx="131.486" ry="33.832" transform="rotate(-45 365.897 351.898)" fill="#00f5a0"/>
+      </g>
+      <g filter="url(#f)">
+        <ellipse cx="403.925" cy="387.926" rx="189.484" ry="43.756" transform="rotate(-45 403.925 387.926)" fill="#ffe600"/>
+      </g>
+      <g filter="url(#g)">
+        <ellipse cx="426.91" cy="412.91" rx="189.484" ry="50.806" transform="rotate(-45 426.91 412.91)" fill="#ff7a00"/>
+      </g>
+      <g filter="url(#h)">
+        <ellipse cx="463.231" cy="463.232" rx="182.5" ry="49.758" transform="rotate(-45 463.231 463.232)" fill="#ff005d"/>
+      </g>
+    </g>
+  </g>
+  <defs>
+    <filter id="c" x="-181.252" y="-229.991" width="948.161" height="948.161" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="70.8" result="effect1_foregroundBlur_1300_1023"/>
+    </filter>
+    <filter id="d" x="35.955" y="12.955" width="591.641" height="591.64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="70.8" result="effect1_foregroundBlur_1300_1023"/>
+    </filter>
+    <filter id="e" x="128.271" y="114.272" width="475.253" height="475.252" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="70.8" result="effect1_foregroundBlur_1300_1023"/>
+    </filter>
+    <filter id="f" x="124.783" y="108.784" width="558.284" height="558.283" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="70.8" result="effect1_foregroundBlur_1300_1023"/>
+    </filter>
+    <filter id="g" x="146.558" y="132.558" width="560.704" height="560.705" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="70.8" result="effect1_foregroundBlur_1300_1023"/>
+    </filter>
+    <filter id="h" x="187.839" y="187.84" width="550.782" height="550.782" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="70.8" result="effect1_foregroundBlur_1300_1023"/>
+    </filter>
+    <clipPath id="a">
+      <path fill="#fff" d="M0 0h512v512H0z"/>
+    </clipPath>
+  </defs>
+</svg>

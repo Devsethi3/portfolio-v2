@@ -1,0 +1,120 @@
+.scene {
+  /* The mask's 318px-wide silhouette should span the content column. Let its
+     12px feather on each side bleed into the page gutter (12 / 318), instead
+     of taking that space away from the visible artwork. */
+  --edge-bleed: 3.7736%;
+  width: calc(100% + 2 * var(--edge-bleed));
+  margin-inline: calc(-1 * var(--edge-bleed));
+
+  /* Blur the alpha silhouette, not the artwork. Transparent edges reveal the
+     actual parent background in either theme, with no color-matched overlay.
+     The inline SVG avoids an extra request and scales with the scene. */
+  --edge-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 342 223' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cfilter id='feather' x='-20%25' y='-20%25' width='140%25' height='140%25' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='4'/%3E%3C/filter%3E%3C/defs%3E%3Crect x='12' y='12' width='318' height='199' rx='14' fill='white' filter='url(%23feather)'/%3E%3C/svg%3E");
+
+  -webkit-mask-image: var(--edge-mask);
+  mask-image: var(--edge-mask);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  mask-mode: alpha;
+}
+
+.rabbitTarget,
+.eagleTarget {
+  position: absolute;
+  /* Center the touch target on the existing rabbit in cropped world space. */
+  left: 38.16%;
+  top: 67.71%;
+  width: max(44px, 7.6%);
+  height: max(44px, 15.25%);
+  transform: translate(-50%, -50%);
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  cursor: default;
+}
+
+.rabbitTarget[aria-disabled="false"],
+.eagleTarget {
+  cursor: pointer;
+}
+
+.rabbitTarget:focus-visible,
+.eagleTarget:focus-visible {
+  outline: 2px solid #60534e;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px #fff3d6;
+}
+
+.eagleTarget {
+  left: 68.27%;
+  top: 41.93%;
+  width: max(44px, 6.43%);
+  height: max(44px, 12.1%);
+}
+
+.speechBubble {
+  --speech-bg: #fffbed;
+  --speech-ink: #5c534a;
+  --speech-border: #7d715943;
+  position: absolute;
+  z-index: 1;
+  width: max-content;
+  max-width: min(210px, 46%);
+  padding: 6px 10px;
+  border: 1px solid var(--speech-border);
+  border-radius: 9px;
+  background: var(--speech-bg);
+  color: var(--speech-ink);
+  box-shadow: 0 2px 5px #342e2312;
+  font-size: clamp(10px, 0.9vw, 11px);
+  font-weight: 450;
+  line-height: 1.35;
+  text-align: center;
+  text-wrap: pretty;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, calc(-100% + 3px));
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.speechBubble::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: calc(50% - 3px);
+  width: 6px;
+  height: 6px;
+  background: var(--speech-bg);
+  border-right: 1px solid var(--speech-border);
+  border-bottom: 1px solid var(--speech-border);
+  transform: rotate(45deg);
+}
+
+.speechBubble[data-visible="true"] {
+  opacity: 1;
+  transform: translate(-50%, -100%);
+}
+
+.eagleSpeech {
+  left: 67.66%;
+  top: 37%;
+}
+
+:global(.dark) .speechBubble {
+  --speech-bg: #332f29;
+  --speech-ink: #f3ecd9;
+  --speech-border: #c7b99c59;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .speechBubble,
+  .speechBubble[data-visible="true"] {
+    transform: translate(-50%, -100%);
+    transition: opacity 80ms linear;
+  }
+}

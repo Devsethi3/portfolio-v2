@@ -1,19 +1,25 @@
-import { Button } from "@/components/ui/button"
+import { GitHubContributions } from "@/components/github-contributions"
+import PixelFishingScene from "@/components/pixel-fishing-scene"
+import { CaseStudiesSection } from "@/components/portfolio/case-studies-section"
+import { GithubContributionsSection } from "@/components/portfolio/github-contributions-section"
+import { IntroductionSection } from "@/components/portfolio/introduction-section"
+import { LabsSection } from "@/components/portfolio/labs-section"
+import { MoonlitDock } from "@/components/portfolio/moonlit-dock"
+import { WorkSection } from "@/components/portfolio/work-section"
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
+    <main className="px-6 py-16 sm:py-24">
+      <div className="mx-auto flex max-w-xl flex-col gap-10">
+        <IntroductionSection />
+        <PixelFishingScene />
+        {/* <MoonlitDock /> */}
+        <WorkSection />
+        <LabsSection />
+        <CaseStudiesSection />
+        
+        <GitHubContributions />
       </div>
-    </div>
+    </main>
   )
 }

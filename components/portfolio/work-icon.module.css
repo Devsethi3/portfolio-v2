@@ -1,0 +1,76 @@
+.tile {
+  --icon-core-top: #686868;
+  --icon-core-mid: #303030;
+  --icon-core-bottom: #141414;
+  --icon-glass-top: #f2f2f2;
+  --icon-glass-mid: #bcbcbc;
+  --icon-glass-bottom: #777777;
+
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(0 0 0 / 4%);
+  border-radius: 12px;
+  background: linear-gradient(145deg, #fff, #fafafa);
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 2%),
+    inset 0 1px 0 rgb(255 255 255 / 90%);
+  transition:
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  overflow: visible;
+  transform: translateY(-1px);
+  transition: transform 280ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+:global(.dark) .tile {
+  --icon-core-top: #797979;
+  --icon-core-mid: #414141;
+  --icon-core-bottom: #222222;
+  --icon-glass-top: #dedede;
+  --icon-glass-mid: #a5a5a5;
+  --icon-glass-bottom: #646464;
+
+  border-color: rgb(255 255 255 / 5%);
+  background: linear-gradient(145deg, #262626, #212121);
+  box-shadow:
+    0 2px 4px rgb(0 0 0 / 8%),
+    inset 0 1px 0 rgb(255 255 255 / 2%);
+}
+
+@media (hover: hover) {
+  a:hover .tile {
+    border-color: rgb(128 128 128 / 20%);
+    box-shadow:
+      0 3px 8px rgb(0 0 0 / 5%),
+      inset 0 1px 0 rgb(255 255 255 / 8%);
+  }
+
+  a:hover .icon {
+    transform: translateY(-2px) rotate(-4deg);
+  }
+}
+
+a:focus-visible .tile {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile,
+  .icon {
+    transition: none;
+  }
+
+  a:hover .icon {
+    transform: translateY(-1px);
+  }
+}
